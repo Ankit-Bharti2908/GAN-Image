@@ -12,7 +12,7 @@ import sys
 import dlib
 
 # Add the DualStyleGAN directory to the path
-sys.path.append("./DualStyleGAN")
+sys.path.append("/content/DualStyleGAN")
 
 # Import DualStyleGAN modules
 from model.dualstylegan import DualStyleGAN
@@ -25,9 +25,9 @@ from util import save_image, load_image, visualize
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Constants
-MODEL_DIR = './DualStyleGAN/checkpoint'
-DATA_DIR = './DualStyleGAN/data'
-OUTPUT_DIR = './outputs'
+MODEL_DIR = '/content/DualStyleGAN/checkpoint'
+DATA_DIR = '/content/DualStyleGAN/data'
+OUTPUT_DIR = '/content/outputs'
 
 # Create output directory if it doesn't exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
